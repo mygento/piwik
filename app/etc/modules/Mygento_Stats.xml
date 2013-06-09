@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Mygento_Stats>
+            <active>true</active>
+            <codePool>local</codePool>
+        </Mygento_Stats>
+    </modules>
+</config>

@@ -1,0 +1,103 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Sea-Lab Ltd
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the Academic Free License (AFL 3.0)
+ *
+ * DISCLAIMER
+ *
+ * Do not edit or add to this file if you wish to upgrade to newer
+ * versions in the future.
+ *
+ * @category   Mygento
+ * @package    Mygento_Stats
+ * @copyright  Copyright © 2011 Sea-Lab Ltd (http://www.mygento.ru)
+ * @contacts   connect@mygento.ru
+ *
+ */ 
+-->
+<config>
+    <modules>
+        <Mygento_Stats>
+            <version>1.0.0.0</version>
+        </Mygento_Stats>
+    </modules>
+    <default>
+        <mystats>
+            <general>
+                <enabled>0</enabled>
+                <debug>0</debug>
+            </general>
+        </mystats>
+    </default>
+    <global>
+		<models>
+			<mystats>
+                <class>Mygento_Stats_Model</class>
+	        </mystats>
+        </models>
+       
+        <blocks>
+        	<mystats>
+                <class>Mygento_Stats_Block</class>
+            </mystats>
+        </blocks>
+        <helpers>
+            <mystats>
+                <class>Mygento_Stats_Helper</class>
+            </mystats>
+        </helpers>
+		
+    </global>
+    <adminhtml>
+        <acl>
+            <resources>
+                <admin>
+                    <children>
+                        <system>
+                            <children>
+                                <config>
+                                    <children>
+                                        <mystats>
+                                            <title>Mygento Statistics</title>
+                                        </mystats>
+                                    </children>
+                                </config>
+                            </children>
+                        </system>
+                    </children>
+                </admin>
+            </resources>
+        </acl>
+        <translate>
+            <modules>
+                <mystats>
+                    <files>
+                        <default>Mygento_Stats.csv</default>
+                    </files>
+                </mystats>
+            </modules>
+        </translate>
+    </adminhtml>
+    <frontend>
+        <layout>
+            <updates>
+                <mystats>
+                    <file>mygento/mygentostats.xml</file>
+                </mystats>
+            </updates>
+        </layout>
+        <translate>
+            <modules>
+                <mystats>
+                    <files>
+                        <default>Mygento_Stats.csv</default>
+                    </files>
+                </mystats>
+            </modules>
+        </translate>
+    </frontend>
+</config>
